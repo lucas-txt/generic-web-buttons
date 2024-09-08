@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import 'praticos'; 
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    outline: none;
+}
+
+html, body {
+    @include boxSize(100vh, 100vw);
+    background-color: rgb(34, 34, 34); 
+    // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrbyD6YLZoTK0e1XZByQknclwQyabbdjbEWw&usqp=CAU);
+    // background-repeat: no-repeat;
+    // background-size: 100%, 100%;
+}
+
+main {
+    @include boxSize(93%, 100%);
+
+    display: grid;
+    grid-template-rows: repeat(50, 1fr);
+    grid-template-columns: repeat(50, 1fr);
+
+    [class^="gadget"] {
+        background-color: $fundo-padrao;
+        border-radius: 15px;
+        box-shadow: $sombra;
+    }
+
+    .gadget-4 {
+        grid-area: 30/2 / 50/9;
+        padding: 1em;
+        
+        @include flex($direction: column, $gap: 1em);
+
+        [class^="botao"] {
+            @include boxSize(25%, 95%);
+            background-color: $fundo-padrao;
+            color: $fundo-padrao-reverso;
+            border: 2px solid $cor;
+            position: relative;
+    
+            font-weight: 600;
+            font-size: 1.2em;
+    
+            border-radius: 10px;
+            @include flex($justfy: center);
+    
+            transition-duration: .35s;
+            animation-timing-function: ease-in-out;
+        }
+
+        .botao-1-gdt3 {
+            border: none;
+            background-color: $cor;
+            color: $cor-padrao-reversa;   
+            overflow: hidden;
+
+            div {
+                @include boxSize(200%, 100%);
+                padding: .6em 0px 1.2em 0px;
+        
+                @include position(relative, $top: 50%);
+                @include flex($direction: column);
+        
+                transition-duration: .3s;
+            }
+            
+            p {
+                transition-duration: .2s;
+                position: relative;
+            }
+
+            &:hover p {
+                transform: translateY(-20%);
+            }
+        }
+        
+        .botao-2-gdt3:hover {
+            border: 2px solid $cor-padrao-reversa;
+
+            &:hover p {
+                color: $cor;
+            }
+
+        }
+
+        .botao-3-gdt3 {
+            p {
+                transition-duration: .2s;
+            }
+
+            &:hover p {
+                letter-spacing: .2em;
+            }
+
+            .fundo-limpar, .fundo-limpou {
+                @include boxSize(100%, 100%);
+                border-radius: 8px;
+        
+                @include flex($justfy: center);
+                position: absolute;
+                overflow-x: hidden;
+                
+                transition-duration: .25s;
+                transition-timing-function: ease-in;
+            }
+
+            .fundo-limpar {
+                left: 0%;
+                background-color: $cor-padrao;
+            }
+        
+            .fundo-limpou {
+                width: 0px;
+                background-color: $cor;
+                right: 0%;
+            }
+            
+        }
+
+        .botao-4-gdt3 {
+            background-color: $cor;
+            transition-duration: .1s;
+            border: none;
+        }
+    }
+}

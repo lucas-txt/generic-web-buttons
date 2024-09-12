@@ -23,18 +23,16 @@ main {
     @include boxSize(93%, 100%);
 
     display: grid;
-    grid-template-rows: repeat(50, 1fr);
-    grid-template-columns: repeat(50, 1fr);
+    place-items: center;
 
-    [class^="gadget"] {
+
+    .buttons {
+        height: 40vh;
+        width: 15vw;
+        padding: 1em;
         background-color: $fundo-padrao;
         border-radius: 15px;
         box-shadow: $sombra;
-    }
-
-    .gadget-4 {
-        grid-area: 30/2 / 50/9;
-        padding: 1em;
         
         @include flex($direction: column, $gap: 1em);
 
@@ -55,7 +53,7 @@ main {
             animation-timing-function: ease-in-out;
         }
 
-        .botao-1-gdt3 {
+        .botao-1 {
             border: none;
             background-color: $cor;
             color: $cor-padrao-reversa;   
@@ -81,7 +79,7 @@ main {
             }
         }
         
-        .botao-2-gdt3:hover {
+        .botao-2:hover {
             border: 2px solid $cor-padrao-reversa;
 
             &:hover p {
@@ -90,7 +88,7 @@ main {
 
         }
 
-        .botao-3-gdt3 {
+        .botao-3 {
             p {
                 transition-duration: .2s;
             }
@@ -124,7 +122,7 @@ main {
             
         }
 
-        .botao-4-gdt3 {
+        .botao-4 {
             background-color: $cor;
             transition-duration: .1s;
             border: none;

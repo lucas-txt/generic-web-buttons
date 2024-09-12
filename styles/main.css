@@ -29,24 +29,22 @@ main {
   height: 93%;
   width: 100%;
   display: grid;
-  grid-template-rows: repeat(50, 1fr);
-  grid-template-columns: repeat(50, 1fr);
+  place-items: center;
 }
-main [class^=gadget] {
+main .buttons {
+  height: 40vh;
+  width: 15vw;
+  padding: 1em;
   background-color: var(--fundo-padrao);
   border-radius: 15px;
   box-shadow: var(--sombra);
-}
-main .gadget-4 {
-  grid-area: 30/2/50/9;
-  padding: 1em;
   display: flex;
   gap: 1em;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-main .gadget-4 [class^=botao] {
+main .buttons [class^=botao] {
   height: 25%;
   width: 95%;
   background-color: var(--fundo-padrao);
@@ -64,13 +62,13 @@ main .gadget-4 [class^=botao] {
   transition-duration: 0.35s;
   animation-timing-function: ease-in-out;
 }
-main .gadget-4 .botao-1-gdt3 {
+main .buttons .botao-1 {
   border: none;
   background-color: var(--cor);
   color: var(--padrao-reverso);
   overflow: hidden;
 }
-main .gadget-4 .botao-1-gdt3 div {
+main .buttons .botao-1 div {
   height: 200%;
   width: 100%;
   padding: 0.6em 0px 1.2em 0px;
@@ -83,26 +81,26 @@ main .gadget-4 .botao-1-gdt3 div {
   justify-content: space-between;
   transition-duration: 0.3s;
 }
-main .gadget-4 .botao-1-gdt3 p {
+main .buttons .botao-1 p {
   transition-duration: 0.2s;
   position: relative;
 }
-main .gadget-4 .botao-1-gdt3:hover p {
+main .buttons .botao-1:hover p {
   transform: translateY(-20%);
 }
-main .gadget-4 .botao-2-gdt3:hover {
+main .buttons .botao-2:hover {
   border: 2px solid var(--padrao-reverso);
 }
-main .gadget-4 .botao-2-gdt3:hover:hover p {
+main .buttons .botao-2:hover:hover p {
   color: var(--cor);
 }
-main .gadget-4 .botao-3-gdt3 p {
+main .buttons .botao-3 p {
   transition-duration: 0.2s;
 }
-main .gadget-4 .botao-3-gdt3:hover p {
+main .buttons .botao-3:hover p {
   letter-spacing: 0.2em;
 }
-main .gadget-4 .botao-3-gdt3 .fundo-limpar, main .gadget-4 .botao-3-gdt3 .fundo-limpou {
+main .buttons .botao-3 .fundo-limpar, main .buttons .botao-3 .fundo-limpou {
   height: 100%;
   width: 100%;
   border-radius: 8px;
@@ -116,16 +114,16 @@ main .gadget-4 .botao-3-gdt3 .fundo-limpar, main .gadget-4 .botao-3-gdt3 .fundo-
   transition-duration: 0.25s;
   transition-timing-function: ease-in;
 }
-main .gadget-4 .botao-3-gdt3 .fundo-limpar {
+main .buttons .botao-3 .fundo-limpar {
   left: 0%;
   background-color: var(--padrao);
 }
-main .gadget-4 .botao-3-gdt3 .fundo-limpou {
+main .buttons .botao-3 .fundo-limpou {
   width: 0px;
   background-color: var(--cor);
   right: 0%;
 }
-main .gadget-4 .botao-4-gdt3 {
+main .buttons .botao-4 {
   background-color: var(--cor);
   transition-duration: 0.1s;
   border: none;

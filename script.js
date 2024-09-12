@@ -12,7 +12,7 @@ var $name = (a) => document.getElementsByName(a)
 ;(function () {
   // 2##>primeiro-botao
   ;(function(){
-      let botao = $class('botao-1-gdt3')[0]
+      let botao = $class('botao-1')[0]
       let paragrafo = botao.children[0].style
   
       let botao_cont = 0
@@ -29,7 +29,7 @@ var $name = (a) => document.getElementsByName(a)
   
   // 2##>segundo-botao
   ;(function(){
-      let botao_2 = document.getElementsByClassName('botao-2-gdt3')[0]
+      let botao_2 = document.getElementsByClassName('botao-2')[0]
       
       let botao_2_cont = 0
       botao_2.addEventListener('click', function() {
@@ -49,7 +49,7 @@ var $name = (a) => document.getElementsByName(a)
   
   // 2##>terceiro-botao
   ;(function(){
-      let botao = $query('div.botao-3-gdt3') 
+      let botao = $query('div.botao-3') 
       
       let botao_cont = 0
       botao.addEventListener('click', clicou) 
@@ -71,7 +71,7 @@ var $name = (a) => document.getElementsByName(a)
 
   // 2##>querto-botao
   ;(function() {
-      let botao = $class('botao-4-gdt3')[0]
+      let botao = $class('botao-4')[0]
       
       botao.addEventListener('click', function () {
           botao.style.filter = 'brightness(250%)'
